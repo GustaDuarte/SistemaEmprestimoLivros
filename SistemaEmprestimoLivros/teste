@@ -1,0 +1,8 @@
+/* Consultar pedidos com tipo "entrega" */
+db.pedidos.find({ "tipo": "entrega" })
+
+/* Consultar pizzas com tamanho "média" */
+db.pizzas.find({ "tamanho": "média" })
+
+/* Consultar bebidas com preço menor que 10.0 */
+db.bebidas.find({ "preco": { $lt: 10.0 } })
