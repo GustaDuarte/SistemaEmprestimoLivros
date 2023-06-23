@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F6lySt4joYEXHuaQerP3oU5GBIiAcwe0fTvL9p54kdvoBSubDKC25wti+RX6+ZKGsAbLC2HbglOZRQtyhfKOyA==",
+  "dgSpecHash": "r+dfkLF4Evy2L2X7ZFmr/WVeOXAv6sk+4PX3zim3l2UPCJTtyeCXoCpjxZ5JbFUk4Go5I9HKwJUP+4gSprTJKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gusta\\Documents\\PooAS\\Poo-AS\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\gusta\\Documents\\PooAS\\SistemaEmprestimoLivros\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gusta\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\gusta\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
