@@ -10,7 +10,7 @@ namespace WebApi.Domain.Entities
     public class Emprestimo : Entity
     {
         public DateTime DataEmprestimo { get; set; }
-        public DateTime DataDevolucao { get; set; }
+        public DateTime? DataDevolucao { get; set; }
         public int UsuarioId { get; set; }
         public Usuario Usuario { get; set; }
         public int LivroId { get; set; }

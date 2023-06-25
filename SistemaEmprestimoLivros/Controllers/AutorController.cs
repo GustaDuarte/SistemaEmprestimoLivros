@@ -41,7 +41,7 @@ namespace Poo_AS.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddAsync(AutorViewModel model)
+        public async Task<IActionResult> AddAsync([FromBody] AutorViewModel model)
         {
             var autor = _mapper.Map<Autor>(model); 
             _autorRepository.Save(autor);
@@ -51,7 +51,7 @@ namespace Poo_AS.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateAsync(int id, AutorViewModel model)
+        public async Task<IActionResult> UpdateAsync(int id, [FromBody] AutorViewModel model)
         {
             var autor = await _autorRepository.GetByIdAsync(id);
             if (autor == null) return NotFound();

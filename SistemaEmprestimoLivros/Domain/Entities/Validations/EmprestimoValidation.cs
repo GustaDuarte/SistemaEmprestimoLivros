@@ -13,8 +13,8 @@ namespace WebApi.Domain.Entities.Validations.ValidationDocuments
             RuleFor(e => e.LivroId)
                 .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido");
             
-                RuleFor(e => e.UsuarioId)
-        .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido");
+            RuleFor(e => e.UsuarioId)
+                .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido");
         }
     }
 }

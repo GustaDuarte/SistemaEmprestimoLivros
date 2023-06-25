@@ -41,7 +41,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddAsync(UsuarioViewModel model)
+        public async Task<IActionResult> AddAsync([FromBody] UsuarioViewModel model)
         {
             var usuario = _mapper.Map<Usuario>(model); 
             _usuarioRepository.Save(usuario);
@@ -51,7 +51,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateAsync(int id, UsuarioViewModel model)
+        public async Task<IActionResult> UpdateAsync(int id, [FromBody] UsuarioViewModel model)
         {
             var usuario = await _usuarioRepository.GetByIdAsync(id);
             if (usuario == null) return NotFound();

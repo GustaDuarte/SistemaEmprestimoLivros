@@ -8,8 +8,9 @@ namespace WebApi.Domain.DTOs
 {
     public class EmprestimoDTO
     {
+        public int Id { get; set; }
         public DateTime DataEmprestimo { get; set; }
-        public DateTime DataDevolucao { get; set; }
+        public DateTime? DataDevolucao { get; set; }
         public int UsuarioId { get; set; }
         public UsuarioDTO Usuario { get; set; }
         public int LivroId { get; set; }

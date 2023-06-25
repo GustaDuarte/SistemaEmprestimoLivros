@@ -41,19 +41,24 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddAsync(EmprestimoViewModel model)
+        public async Task<IActionResult> AddAsync([FromBody] EmprestimoViewModel model)
         {
-            if (!ModelState.IsValid) return HttpMessageError("Dados incorretos");
+            var emprestimo = _mapper.Map<Emprestimo>(model);
 
-            var emprestimo = _mapper.Map<Emprestimo>(model); 
+            if (model.DataDevolucao == null)
+            {
+                emprestimo.DataDevolucao = DateTime.MinValue;
+            }
+
             _emprestimoRepository.Save(emprestimo);
             await _unitOfWork.Commit();
 
             return HttpMessageOk(_mapper.Map<EmprestimoDTO>(emprestimo));
         }
 
+
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateAsync(int id, EmprestimoViewModel model)
+        public async Task<IActionResult> UpdateAsync(int id, [FromBody] EmprestimoViewModel model)
         {
             if (!ModelState.IsValid) return HttpMessageError("Dados incorretos");
 
@@ -84,12 +89,8 @@ namespace WebApi.Controllers
         }
 
         [HttpPost("emprestar-livro")]
-        public async Task<IActionResult> EmprestarLivroAsync(EmprestimoViewModel model)
+        public async Task<IActionResult> EmprestarLivroAsync([FromBody] EmprestimoViewModel model)
         {
-            if (!ModelState.IsValid) return HttpMessageError("Dados incorretos");
-
-            // Verificar se o livro está disponível para empréstimo (lógica de negócio específica)
-
             var emprestimo = _mapper.Map<Emprestimo>(model); 
             _emprestimoRepository.Save(emprestimo);
             await _unitOfWork.Commit();

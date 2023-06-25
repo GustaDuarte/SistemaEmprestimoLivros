@@ -10,7 +10,7 @@ namespace WebApi.Domain.ViewModels
     {
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public DateTime DataEmprestimo { get; set; }
-        public DateTime DataDevolucao { get; set; }
+        public DateTime? DataDevolucao { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public int LivroId { get; set; }

@@ -41,7 +41,7 @@ namespace Poo_AS.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddAsync(LivroViewModel model)
+        public async Task<IActionResult> AddAsync([FromBody] LivroViewModel model)
         {
             var livro = _mapper.Map<Livro>(model); 
             _livroRepository.Save(livro);
@@ -51,7 +51,7 @@ namespace Poo_AS.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateAsync(int id, LivroViewModel model)
+        public async Task<IActionResult> UpdateAsync(int id, [FromBody] LivroViewModel model)
         {
             var livro = await _livroRepository.GetByIdAsync(id);
             if (livro == null) return NotFound();

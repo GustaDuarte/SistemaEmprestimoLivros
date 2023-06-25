@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gusta\\Documents\\PooAS\\SistemaEmprestimoLivros\\WebApi.csproj": {}
+    "C:\\Users\\gusta\\Desktop\\PooAS\\SistemaEmprestimoLivros\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gusta\\Documents\\PooAS\\SistemaEmprestimoLivros\\WebApi.csproj": {
+    "C:\\Users\\gusta\\Desktop\\PooAS\\SistemaEmprestimoLivros\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gusta\\Documents\\PooAS\\SistemaEmprestimoLivros\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\gusta\\Desktop\\PooAS\\SistemaEmprestimoLivros\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\gusta\\Documents\\PooAS\\SistemaEmprestimoLivros\\WebApi.csproj",
+        "projectPath": "C:\\Users\\gusta\\Desktop\\PooAS\\SistemaEmprestimoLivros\\WebApi.csproj",
         "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gusta\\Documents\\PooAS\\SistemaEmprestimoLivros\\obj\\",
+        "outputPath": "C:\\Users\\gusta\\Desktop\\PooAS\\SistemaEmprestimoLivros\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config"
